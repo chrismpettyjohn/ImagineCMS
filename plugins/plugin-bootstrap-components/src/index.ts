@@ -1,0 +1,1 @@
+export const pluginBootstrapComponents = 1.0;

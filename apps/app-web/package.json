@@ -12,7 +12,8 @@
     "react": "^18",
     "react-dom": "^18",
     "next": "14.2.11",
-    "@imagine/lib-composer": "workspace:*"
+    "@imagine/lib-composer": "workspace:*",
+    "@imagine/plugin-bootstrap-components": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5",
