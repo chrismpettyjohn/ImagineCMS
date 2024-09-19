@@ -9,8 +9,8 @@
     "dev:logs": "pm2 logs",
     "dev:restart": "pnpm run dev:stop && pnpm run dev:start",
     "dev:stop": "pm2 stop all && pm2 delete all",
-    "app:api": "pnpm run --filter @imagine/app-api/api --",
-    "app:web": "pnpm run --filter @imagine/app-web/imagine-web --"
+    "app:api": "pnpm run --filter @imagine/app-api --",
+    "app:web": "pnpm run --filter @imagine/app-web --"
   },
   "devDependencies": {
     "@types/node": "20.10.5",

@@ -1,0 +1,1 @@
+export const composerLib = 1.0;
