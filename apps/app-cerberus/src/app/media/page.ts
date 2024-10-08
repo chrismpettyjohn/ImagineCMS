@@ -1,0 +1,1 @@
+export { MediaListPage as default } from "../../ui/pages/media/MediaList";

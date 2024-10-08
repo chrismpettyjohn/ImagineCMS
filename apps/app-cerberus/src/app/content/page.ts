@@ -1,0 +1,1 @@
+export { ContentListPage as default } from "../../ui/pages/content/ContentList";

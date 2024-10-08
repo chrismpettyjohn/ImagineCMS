@@ -1,0 +1,1 @@
+export { UsersListPage as default } from "../../ui/pages/users/UsersList";

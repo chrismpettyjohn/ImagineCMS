@@ -1,0 +1,1 @@
+export { SchemaListPage as default } from "../../ui/pages/schema/SchemaList";
