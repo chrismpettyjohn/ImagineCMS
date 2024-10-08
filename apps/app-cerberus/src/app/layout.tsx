@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SiteHeader } from "../ui/components/layout/SiteHeader";
+import { ThemeProvider } from "../ui/theme/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "ImagineCMS ",
@@ -12,11 +13,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <SiteHeader />
-        {children}
-      </body>
-    </html>
+    <ThemeProvider>
+      <html lang="en">
+        <body>
+          <SiteHeader />
+          {children}
+        </body>
+      </html>
+    </ThemeProvider>
+
   );
 }
