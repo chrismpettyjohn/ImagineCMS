@@ -1,0 +1,1 @@
+export { RolesListPage as default } from "../../ui/pages/roles/RolesList";

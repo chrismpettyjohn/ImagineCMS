@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { SiteHeader } from "../ui/components/layout/SiteHeader";
 import { ThemeProvider } from "../ui/theme/ThemeProvider";
+import { AdminHeader } from "../ui/components/admin-header/AdminHeader";
+import { AdminSidebar } from "../ui/components/admin-sidebar/AdminSidebar";
 
 export const metadata: Metadata = {
   title: "ImagineCMS ",
@@ -16,7 +17,8 @@ export default function RootLayout({
     <ThemeProvider>
       <html lang="en">
         <body>
-          <SiteHeader />
+          <AdminHeader />
+          <AdminSidebar />
           {children}
         </body>
       </html>

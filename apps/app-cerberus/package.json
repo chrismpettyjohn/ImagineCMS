@@ -14,6 +14,7 @@
     "@fontsource/roboto": "^5.1.0",
     "@imagine/lib-composer": "workspace:*",
     "@imagine/plugin-bootstrap-components": "workspace:*",
+    "@mui/icons-material": "^6.1.2",
     "@mui/material": "^6.1.2",
     "next": "14.2.11",
     "react": "^18",
