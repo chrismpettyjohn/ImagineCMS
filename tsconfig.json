@@ -36,5 +36,5 @@
   "include": [
     "apps",
     "libs"
-  ]
+, "service/svc-content-page/content-page", "service/svc-content-type/content-type", "service/svc-content-schema/content-schema"  ]
 }
