@@ -28,10 +28,10 @@ const contentTypes = [
     },
 ];
 
-export function SchemaListPage() {
+export function ContentSchemaListPage() {
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', justifyContent: 'flex-start', padding: 8 }}>
-            <Typography variant="h4" sx={{ marginBottom: 2 }}>Schemas</Typography>
+            <Typography variant="h4" sx={{ marginBottom: 2 }}>Content Schemas</Typography>
             <TableContainer component={Paper} sx={{ flexGrow: 1, height: '100%' }}>
                 <Table sx={{ minWidth: 650 }} aria-label="content types table">
                     <TableHead>

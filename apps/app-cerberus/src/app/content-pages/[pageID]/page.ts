@@ -1,0 +1,1 @@
+export { ContentPageEditPage as default } from "../../../ui/pages/content-pages/ContentPageEdit";

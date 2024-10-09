@@ -1,0 +1,1 @@
+export { ContentSchemaEditPage as default } from "../../../../ui/pages/content-schema/ContentSchemaEdit";

@@ -1,0 +1,1 @@
+export { ContentTypeListPage as default } from "../../ui/pages/content-types/ContentTypeList";

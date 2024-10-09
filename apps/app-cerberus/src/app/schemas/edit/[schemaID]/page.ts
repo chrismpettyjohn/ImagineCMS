@@ -1,1 +1,0 @@
-export { SchemaEditPage as default } from "../../../../ui/pages/schema/SchemaEdit";

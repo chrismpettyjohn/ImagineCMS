@@ -1,7 +1,7 @@
 'use client';
 
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, Box, Typography, Divider, Link } from "@mui/material";
-import { Dashboard, People, Group, Schema, Mms, Wysiwyg, Room, EventSeat, PeopleAlt } from "@mui/icons-material";
+import { Dashboard, People, Group, Schema, Mms, Wysiwyg, Web, Pages } from "@mui/icons-material";
 import { ReactNode } from "react";
 
 export const SIDEBAR_WIDTH = 250;
@@ -24,17 +24,15 @@ const SIDEBAR_GROUPS: SidebarGroup[] = [
             { label: 'Dashboard', icon: Dashboard, href: '/dashboard' },
             { label: 'Users', icon: People, href: '/users' },
             { label: 'Roles', icon: Group, href: '/roles' },
-            { label: 'Media', icon: Mms, href: '/media' },
-            { label: 'Content', icon: Wysiwyg, href: '/content' },
-            { label: 'Schemas', icon: Schema, href: '/schemas' },
         ],
     },
     {
-        title: 'Habbo Management',
+        title: 'Customization',
         links: [
-            { label: 'Players', icon: PeopleAlt, href: '/habbo/players' },
-            { label: 'Rooms', icon: Room, href: '/habbo/rooms' },
-            { label: 'Furniture', icon: EventSeat, href: '/habbo/furniture' },
+            { label: 'Media', icon: Mms, href: '/media' },
+            { label: 'Pages', icon: Pages, href: '/content-pages' },
+            { label: 'Content Types', icon: Wysiwyg, href: '/content-types' },
+            { label: 'Content Schema', icon: Schema, href: '/content-schemas' },
         ],
     },
 ];

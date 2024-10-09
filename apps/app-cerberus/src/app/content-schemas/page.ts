@@ -1,0 +1,1 @@
+export { ContentSchemaListPage as default } from "../../ui/pages/content-schema/ContentSchemaList";
