@@ -3,32 +3,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@imagine/api": [
-        "apps/imagine-api/src"
-      ],
       "@imagine/imagine-web": [
         "apps/imagine-web/src"
       ],
       "@imagine/imagine-next": [
         "apps/imagine-next/src"
       ],
-      "@imagine/game-ui": [
-        "libs/game-ui/src"
-      ],
-      "@imagine/shared-ui": [
-        "libs/shared-ui/src"
-      ],
-      "@imagine/client": [
-        "libs/client/src"
-      ],
-      "@imagine/types": [
-        "libs/types/src"
-      ],
-      "@imagine/web": [
-        "libs/web/src"
-      ],
-      "@imagine/websocket": [
-        "libs/websocket/src"
+      "@imagine/lib-composer": [
+        "libs/lib-composer/src"
       ],
       "@imagine/svc-auth": [
         "service/svc-auth/src"
@@ -57,12 +39,7 @@
   "include": [
     "apps",
     "libs",
-    "service/svc-auth/src",
-    "service/svc-content-page/src",
-    "service/svc-content-schema/src",
-    "service/svc-content-type/src",
-    "service/svc-graphql/src",
-    "service/svc-role/src",
-    "service/svc-user/src"
+    "plugins",
+    "service",
   ]
 }

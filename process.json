@@ -1,20 +1,6 @@
 {
   "apps": [
     {
-      "name": "imagine-api",
-      "cwd": "./apps/imagine-api",
-      "script": "pnpm",
-      "args": "run dev",
-      "watch": [
-        "src",
-        ".../../libs/graphql"
-      ],
-      "ignore_watch": [
-        "src/schema.gql"
-      ],
-      "watch_delay": 1000
-    },
-    {
       "name": "imagine-next",
       "cwd": "./apps/imagine-next",
       "script": "pnpm",
