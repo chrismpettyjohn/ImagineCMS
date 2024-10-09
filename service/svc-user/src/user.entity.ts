@@ -1,21 +1,10 @@
-import { pgTable, serial, varchar, timestamp } from 'drizzle-orm/pg-core';
+import { pgTable, serial, varchar, integer, timestamp } from 'drizzle-orm/pg-core';
 
-export const users = pgTable('users', {
+export const usersTable = pgTable('users', {
     id: serial('id').primaryKey(),
-    username: varchar('username', { length: 255 }).notNull(),
-    email: varchar('email', { length: 255 }).notNull(),
-    password: varchar('password', { length: 255 }).notNull(),
-    createdAt: timestamp('created_at').defaultNow().notNull(),
-    updatedAt: timestamp('updated_at').defaultNow().notNull(),
+    name: varchar('name', { length: 255 }),
+    email: varchar('email', { length: 255 }).unique(),
+    age: integer('age'),
+    createdAt: timestamp('createdAt').defaultNow(),
+    updatedAt: timestamp('updatedAt').defaultNow(),
 });
-
-export interface User {
-    id: number;
-    username: string;
-    email: string;
-    password: string;
-    createdAt: Date;
-    updatedAt: Date;
-}
-
-export type NewUser = Omit<User, 'id' | 'createdAt' | 'updatedAt'>;

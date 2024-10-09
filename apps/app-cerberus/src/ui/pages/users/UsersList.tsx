@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Avatar, Button, Box, Typography } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Avatar, Button, Box, Typography, Link } from '@mui/material';
 
 const users = [
     { id: 1, name: 'John Doe', email: 'john.doe@example.com', avatar: '', role: 'Admin' },
@@ -46,9 +46,10 @@ export function UsersListPage() {
                                 <TableCell>{user.email}</TableCell>
                                 <TableCell>{user.role}</TableCell>
                                 <TableCell>
-                                    <Button variant="contained" color="primary" size="small" sx={{ mr: 1 }}>
-                                        Edit
-                                    </Button>
+                                    <Link href={`/users/edit/${user.id}`}>
+                                        <Button variant="contained" color="primary" size="small" sx={{ mr: 1 }}>
+                                            Edit
+                                        </Button></Link>
                                     <Button variant="contained" color="secondary" size="small">
                                         Delete
                                     </Button>
