@@ -1,9 +1,24 @@
-import { AppBar, Typography } from "@mui/material";
+import { AppBar, Toolbar, Typography } from "@mui/material";
+import { SIDEBAR_WIDTH } from "../admin-sidebar/AdminSidebar";
 
 export function AdminHeader() {
     return (
-        <AppBar>
-            <Typography fontWeight={600} fontSize={20}>Cerberus</Typography>
+        <AppBar
+            position="fixed"
+            sx={{
+                width: `calc(100% - ${SIDEBAR_WIDTH}px)`,
+                ml: `${SIDEBAR_WIDTH}px`,
+                boxShadow: 'none',
+                bgcolor: 'background.primary',
+                color: 'text.primary',
+                pl: 4
+            }}
+        >
+            <Toolbar>
+                <Typography variant="h6" noWrap>
+                    Cerberus
+                </Typography>
+            </Toolbar>
         </AppBar>
-    )
+    );
 }
