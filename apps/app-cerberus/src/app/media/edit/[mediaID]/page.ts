@@ -1,1 +1,0 @@
-export { MediaEditPage as default } from "../../../../ui/pages/media/MediaEdit";

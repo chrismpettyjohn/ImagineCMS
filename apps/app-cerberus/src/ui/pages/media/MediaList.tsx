@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Avatar, Button, Box, Typography } from '@mui/material';
+import Link from 'next/link';
 
 const mediaItems = [
     {
@@ -63,9 +64,11 @@ export function MediaListPage() {
                                 <TableCell>{media.size}</TableCell>
                                 <TableCell>{media.dateUploaded}</TableCell>
                                 <TableCell>
-                                    <Button variant="contained" color="primary" size="small" sx={{ mr: 1 }}>
-                                        Edit
-                                    </Button>
+                                    <Link href={`/media/edit/${media.id}`}>
+                                        <Button variant="contained" color="primary" size="small" sx={{ mr: 1 }}>
+                                            Edit
+                                        </Button>
+                                    </Link>
                                     <Button variant="contained" color="secondary" size="small">
                                         Delete
                                     </Button>

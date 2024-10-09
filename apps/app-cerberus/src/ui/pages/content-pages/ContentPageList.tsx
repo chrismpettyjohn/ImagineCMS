@@ -1,5 +1,6 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Box, Chip, Typography, Link } from '@mui/material';
+import Link from 'next/link';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Box, Chip, Typography } from '@mui/material';
 
 // Sample data structure for pages
 const contentPages = [

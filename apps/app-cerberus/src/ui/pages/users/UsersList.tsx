@@ -1,5 +1,6 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Avatar, Button, Box, Typography, Link } from '@mui/material';
+import Link from 'next/link';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Avatar, Button, Box, Typography } from '@mui/material';
 
 const users = [
     { id: 1, name: 'John Doe', email: 'john.doe@example.com', avatar: '', role: 'Admin' },

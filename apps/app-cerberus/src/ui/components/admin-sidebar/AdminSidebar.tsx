@@ -1,6 +1,6 @@
 'use client';
-
-import { Drawer, List, ListItem, ListItemIcon, ListItemText, Box, Typography, Divider, Link } from "@mui/material";
+import Link from 'next/link';
+import { Drawer, List, ListItem, ListItemIcon, ListItemText, Box, Typography, Divider, } from "@mui/material";
 import { Dashboard, People, Group, Schema, Mms, Wysiwyg, Web, Pages } from "@mui/icons-material";
 import { ReactNode } from "react";
 
