@@ -1,1 +1,0 @@
-export { ContentTypeEditPage as default } from "../../../../ui/pages/content-types/ContentTypeEdit";

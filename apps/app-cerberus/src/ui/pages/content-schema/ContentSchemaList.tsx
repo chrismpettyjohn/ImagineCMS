@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Box, Chip, Typography } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Box, Chip, Typography, Link } from '@mui/material';
 
 const contentTypes = [
     {
@@ -46,16 +46,16 @@ export function ContentSchemaListPage() {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {contentTypes.map((contentType) => (
-                            <TableRow key={contentType.id}>
-                                <TableCell>{contentType.id}</TableCell>
-                                <TableCell>{contentType.name}</TableCell>
-                                <TableCell>{contentType.description}</TableCell>
-                                <TableCell>{contentType.version}</TableCell>
+                        {contentTypes.map((contentSchema) => (
+                            <TableRow key={contentSchema.id}>
+                                <TableCell>{contentSchema.id}</TableCell>
+                                <TableCell>{contentSchema.name}</TableCell>
+                                <TableCell>{contentSchema.description}</TableCell>
+                                <TableCell>{contentSchema.version}</TableCell>
                                 {/* Display fields */}
                                 <TableCell>
                                     <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-                                        {contentType.fields.map((field) => (
+                                        {contentSchema.fields.map((field) => (
                                             <Chip key={field} label={field} size="small" variant="outlined" />
                                         ))}
                                     </Box>
@@ -63,15 +63,17 @@ export function ContentSchemaListPage() {
                                 {/* Display permissions/scopes */}
                                 <TableCell>
                                     <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-                                        {contentType.scopes.map((scope) => (
+                                        {contentSchema.scopes.map((scope) => (
                                             <Chip key={scope} label={scope} color="primary" size="small" />
                                         ))}
                                     </Box>
                                 </TableCell>
                                 <TableCell>
-                                    <Button variant="contained" color="primary" size="small" sx={{ mr: 1 }}>
-                                        Edit
-                                    </Button>
+                                    <Link href={`/content-schemas/edit/${contentSchema.id}`}>
+                                        <Button variant="contained" color="primary" size="small" sx={{ mr: 1 }}>
+                                            Edit
+                                        </Button>
+                                    </Link>
                                     <Button variant="contained" color="secondary" size="small">
                                         Delete
                                     </Button>

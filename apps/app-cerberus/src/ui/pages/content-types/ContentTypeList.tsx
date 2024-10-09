@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Box, Chip, Typography } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Box, Chip, Typography, Link } from '@mui/material';
 
 const contentTypes = [
     {
@@ -69,9 +69,11 @@ export function ContentTypeListPage() {
                                     </Box>
                                 </TableCell>
                                 <TableCell>
-                                    <Button variant="contained" color="primary" size="small" sx={{ mr: 1 }}>
-                                        Edit
-                                    </Button>
+                                    <Link href={`/content-types/edit/${contentType.id}`}>
+                                        <Button variant="contained" color="primary" size="small" sx={{ mr: 1 }}>
+                                            Edit
+                                        </Button>
+                                    </Link>
                                     <Button variant="contained" color="secondary" size="small">
                                         Delete
                                     </Button>

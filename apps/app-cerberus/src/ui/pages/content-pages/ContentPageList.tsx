@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Box, Chip, Typography } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Box, Chip, Typography, Link } from '@mui/material';
 
 // Sample data structure for pages
 const contentPages = [
@@ -58,9 +58,11 @@ export function ContentPageListPage() {
                                     </Box>
                                 </TableCell>
                                 <TableCell>
-                                    <Button variant="contained" color="primary" size="small" sx={{ mr: 1 }}>
-                                        Edit
-                                    </Button>
+                                    <Link href={`/content-pages/edit/${page.id}`}>
+                                        <Button variant="contained" color="primary" size="small" sx={{ mr: 1 }}>
+                                            Edit
+                                        </Button>
+                                    </Link>
                                     <Button variant="contained" color="secondary" size="small">
                                         Delete
                                     </Button>
