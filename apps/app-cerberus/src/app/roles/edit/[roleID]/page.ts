@@ -1,1 +1,0 @@
-export { RolesEditPage as default } from "../../../../ui/pages/roles/RolesEdit";

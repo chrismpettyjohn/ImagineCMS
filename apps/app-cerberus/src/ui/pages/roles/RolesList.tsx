@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Avatar, Button, Box, Chip, Typography } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Avatar, Button, Box, Chip, Typography, Link } from '@mui/material';
 
 const roles = [
     {
@@ -58,9 +58,11 @@ export function RolesListPage() {
                                     </Box>
                                 </TableCell>
                                 <TableCell>
-                                    <Button variant="contained" color="primary" size="small" sx={{ mr: 1 }}>
-                                        Edit
-                                    </Button>
+                                    <Link href={`/roles/edit/${role.id}`}>
+                                        <Button variant="contained" color="primary" size="small" sx={{ mr: 1 }}>
+                                            Edit
+                                        </Button>
+                                    </Link>
                                     <Button variant="contained" color="secondary" size="small">
                                         Delete
                                     </Button>
