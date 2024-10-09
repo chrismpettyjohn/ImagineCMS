@@ -70,7 +70,12 @@ export function AdminSidebar() {
                         </Typography>
                         <List disablePadding>
                             {group.links.map((link) => (
-                                <Link key={link.href} href={link.href} passHref>
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    passHref
+                                    style={{ textDecoration: 'none' }}
+                                >
                                     <ListItem button component="a" sx={{ pl: 4, py: 1 }}>
                                         <ListItemIcon sx={{ color: 'white' }}>
                                             <link.icon />
@@ -86,6 +91,7 @@ export function AdminSidebar() {
                                         />
                                     </ListItem>
                                 </Link>
+
                             ))}
                         </List>
                         {index < SIDEBAR_GROUPS.length - 1 && (

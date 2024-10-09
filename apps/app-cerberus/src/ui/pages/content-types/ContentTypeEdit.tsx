@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import 'monaco-editor/esm/vs/basic-languages/yaml/yaml.contribution';
 import { SchemaEditor } from '../../components/schema-editor/SchemaEditor';
+import { Box, Typography } from '@mui/material';
 
-const initialType = {
+const initialSchema = {
     title: "Person",
     type: "object",
     properties: {
@@ -14,12 +15,17 @@ const initialType = {
     }
 };
 
-interface ContentTypesEditTypeProps {
+interface ContentTypesEditPageProps {
     contentTypeID: number;
 }
 
-export function ContentTypesEditPage({ contentTypeID }: ContentTypesEditTypeProps) {
+export function ContentTypesEditPage({ contentTypeID }: ContentTypesEditPageProps) {
     const [fileName, setFileName] = useState('/types/landing/christmas-2024.yml');
-    const [type, setType] = useState<any>(initialType);
-    return <SchemaEditor fileName={fileName} defaultType={type} onSave={setType} />
+    const [schema, setSchema] = useState<any>(initialSchema);
+    return (
+        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', padding: 8 }}>
+            <Typography variant="h4" sx={{ marginBottom: 2 }}>Type Editor</Typography>
+            <SchemaEditor fileName={fileName} defaultSchema={schema} onSave={setSchema} />
+        </Box>
+    )
 }

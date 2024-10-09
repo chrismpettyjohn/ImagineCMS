@@ -55,9 +55,7 @@ export function SchemaEditor({ fileName, defaultSchema, onSave }: SchemaEditorPr
     };
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', padding: 8 }}>
-            <Typography variant="h4" sx={{ marginBottom: 2 }}>Editing Page</Typography>
-
+        <>
             {/* Breadcrumbs and Actions */}
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', mb: 4 }}>
                 <Breadcrumbs aria-label="breadcrumb">
@@ -116,6 +114,6 @@ export function SchemaEditor({ fileName, defaultSchema, onSave }: SchemaEditorPr
                     </Typography>
                 </Container>
             </Box>
-        </Box>
+        </>
     );
 }
