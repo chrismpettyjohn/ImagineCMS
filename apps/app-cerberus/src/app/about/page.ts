@@ -1,0 +1,1 @@
+export { AboutPage as default } from "../../ui/pages/about/About";

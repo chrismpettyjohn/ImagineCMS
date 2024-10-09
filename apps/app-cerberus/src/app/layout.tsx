@@ -23,7 +23,7 @@ export default function RootLayout({
             <AdminSidebar />
             <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
               <AdminHeader />
-              <Box component="main" sx={{ flexGrow: 1, pt: 2, maxWidth: '95%', margin: '0' }}>
+              <Box component="main" sx={{ flexGrow: 1, pt: 4, maxWidth: '95%', margin: '0' }}>
                 {children}
               </Box>
             </Box>
