@@ -6,27 +6,16 @@ import YAML from 'js-yaml';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import 'monaco-editor/esm/vs/basic-languages/yaml/yaml.contribution';
 
-const initialSchema = {
-    title: "Person",
-    type: "object",
-    properties: {
-        name: { type: "string", title: "Name" },
-        addressline1: { type: "string", title: "Address Line 1" },
-        addressline2: { type: "string", title: "Address Line 2" },
-        city: { type: "string", title: "City" }
-    }
-};
-
 interface SchemaEditorProps {
     fileName: string;
-    defaultSchema: object;
+    defaultSchema: any;
     onSave(newSchema: object): void;
 }
 
 export function SchemaEditor({ fileName, defaultSchema, onSave }: SchemaEditorProps) {
     const filePath = useMemo(() => fileName.split('/').filter(Boolean), [fileName]);
-    const [schema, setSchema] = useState<any>(defaultSchema);
-    const [yamlText, setYamlText] = useState(YAML.dump(initialSchema));
+    const [schema, setSchema] = useState<any>(YAML.load(defaultSchema));
+    const [yamlText, setYamlText] = useState(YAML.dump(defaultSchema));
     const [validationError, setValidationError] = useState<any>(null);
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 

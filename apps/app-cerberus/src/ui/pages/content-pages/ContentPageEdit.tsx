@@ -5,15 +5,54 @@ import { SchemaEditor } from '../../components/schema-editor/SchemaEditor';
 import { Box, Typography } from '@mui/material';
 
 const initialSchema = {
-    title: "Person",
-    type: "object",
-    properties: {
-        name: { type: "string", title: "Name" },
-        addressline1: { type: "string", title: "Address Line 1" },
-        addressline2: { type: "string", title: "Address Line 2" },
-        city: { type: "string", title: "City" }
+    "contentType": {
+        "key": "siteHeader",
+        "version": "1.0",
+        "props": {
+            "logo": {
+                "type": "image",
+                "required": true
+            },
+            "title": {
+                "type": "string",
+                "required": true
+            },
+            "tagline": {
+                "type": "string",
+                "required": false
+            },
+            "navLinks": {
+                "type": "list",
+                "items": {
+                    "type": "object",
+                    "props": {
+                        "label": {
+                            "type": "string",
+                            "required": true
+                        },
+                        "url": {
+                            "type": "string",
+                            "required": true
+                        },
+                        "newTab": {
+                            "type": "boolean",
+                            "required": false
+                        }
+                    }
+                },
+                "required": true
+            },
+            "backgroundColor": {
+                "type": "string",
+                "required": false
+            },
+            "sticky": {
+                "type": "boolean",
+                "required": false
+            }
+        }
     }
-};
+}
 
 interface ContentPagesEditPageProps {
     contentPageID: number;
@@ -24,6 +63,7 @@ export function ContentPagesEditPage({ contentPageID }: ContentPagesEditPageProp
     const [schema, setSchema] = useState<any>(initialSchema);
 
     return (
+
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', padding: 8 }}>
             <Typography variant="h4" sx={{ marginBottom: 2 }}>Page Editor</Typography>
             <SchemaEditor fileName={fileName} defaultSchema={schema} onSave={setSchema} />
