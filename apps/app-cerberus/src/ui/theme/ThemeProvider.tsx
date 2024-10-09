@@ -7,6 +7,7 @@ import { ThemeProvider as MuiProvider } from '@mui/material/styles';
 import { defaultTheme } from './default.theme';
 import { ReactNode } from 'react';
 import { CssBaseline } from '@mui/material';
+import { css, Global } from '@emotion/react';
 
 export interface ThemeProviderProps {
     children: ReactNode;
@@ -15,6 +16,15 @@ export interface ThemeProviderProps {
 export function ThemeProvider({ children }: ThemeProviderProps) {
     return (
         <MuiProvider theme={defaultTheme}>
+            <Global
+                styles={css`
+                    body {
+                        color: black !important;
+                        background-color: white;
+                        font-family: Arial, sans-serif;
+                    }
+                `}
+            />
             <CssBaseline />
             {children}
         </MuiProvider>
