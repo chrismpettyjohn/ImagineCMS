@@ -1,45 +1,25 @@
 'use client';
-import React, { useState, ChangeEvent, SyntheticEvent } from 'react';
-import { Box, Button, TextField, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import 'monaco-editor/esm/vs/basic-languages/yaml/yaml.contribution';
+import { SchemaEditor } from '../../components/schema-editor/SchemaEditor';
 
-interface ContentTypesEditPageProps {
+const initialType = {
+    title: "Person",
+    type: "object",
+    properties: {
+        name: { type: "string", title: "Name" },
+        addressline1: { type: "string", title: "Address Line 1" },
+        addressline2: { type: "string", title: "Address Line 2" },
+        city: { type: "string", title: "City" }
+    }
+};
+
+interface ContentTypesEditTypeProps {
     contentTypeID: number;
 }
 
-export function ContentTypesEditPage({ contentTypeID }: ContentTypesEditPageProps) {
-    const [contentType, setContentType] = useState({
-        name: '',
-        scopes: ['user:list', 'user:view']
-    })
-
-    function onChange(event: ChangeEvent<HTMLInputElement>) {
-        setContentType(_ => ({
-            ..._,
-            [event.target.name]: event.target.value,
-        }))
-    }
-
-    function onSubmit(event: SyntheticEvent) {
-        event.preventDefault();
-    }
-
-    return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', justifyContent: 'flex-start', padding: 8 }}>
-            <Typography variant="h4" sx={{ marginBottom: 2 }}>Editing Content Type</Typography>
-            <form onSubmit={onSubmit}>
-                <TextField
-                    fullWidth
-                    label="Name"
-                    name="name"
-                    value={contentType.name}
-                    onChange={onChange}
-                    margin="normal"
-                    variant="outlined"
-                />
-                <Button type="submit" variant="contained" color="primary" sx={{ mt: 2 }}>
-                    Save
-                </Button>
-            </form>
-        </Box>
-    );
+export function ContentTypesEditPage({ contentTypeID }: ContentTypesEditTypeProps) {
+    const [fileName, setFileName] = useState('/types/landing/christmas-2024.yml');
+    const [type, setType] = useState<any>(initialType);
+    return <SchemaEditor fileName={fileName} defaultType={type} onSave={setType} />
 }
