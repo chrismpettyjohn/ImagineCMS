@@ -19,6 +19,48 @@
       "cwd": "./apps/imagine-next",
       "script": "pnpm",
       "args": "run dev"
+    },
+    {
+      "name": "svc-auth",
+      "cwd": "./apps/svc-auth",
+      "script": "pnpm",
+      "args": "run dev"
+    },
+    {
+      "name": "svc-content-page",
+      "cwd": "./apps/svc-content-page",
+      "script": "pnpm",
+      "args": "run dev"
+    },
+    {
+      "name": "svc-content-schema",
+      "cwd": "./apps/svc-content-schema",
+      "script": "pnpm",
+      "args": "run dev"
+    },
+    {
+      "name": "svc-content-type",
+      "cwd": "./apps/svc-content-type",
+      "script": "pnpm",
+      "args": "run dev"
+    },
+    {
+      "name": "svc-graphql",
+      "cwd": "./apps/svc-graphql",
+      "script": "pnpm",
+      "args": "run dev"
+    },
+    {
+      "name": "svc-role",
+      "cwd": "./apps/svc-role",
+      "script": "pnpm",
+      "args": "run dev"
+    },
+    {
+      "name": "svc-user",
+      "cwd": "./apps/svc-user",
+      "script": "pnpm",
+      "args": "run dev"
     }
   ]
 }

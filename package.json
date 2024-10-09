@@ -11,7 +11,14 @@
     "dev:stop": "pm2 stop all && pm2 delete all",
     "app:api": "pnpm run --filter @imagine/app-api --",
     "app:cerberus": "pnpm run --filter @imagine/app-cerberus --",
-    "app:web": "pnpm run --filter @imagine/app-web --"
+    "app:web": "pnpm run --filter @imagine/app-web --",
+    "svc:auth": "pnpm run --filter @imagine/svc-auth --",
+    "svc:content-page": "pnpm run --filter @imagine/svc-content-page --",
+    "svc:content-schema": "pnpm run --filter @imagine/svc-content-schema --",
+    "svc:content-type": "pnpm run --filter @imagine/svc-content-type --",
+    "svc:graphql": "pnpm run --filter @imagine/svc-graphql --",
+    "svc:role": "pnpm run --filter @imagine/svc-role --",
+    "svc:user": "pnpm run --filter @imagine/svc-user --"
   },
   "devDependencies": {
     "@types/node": "20.10.5",

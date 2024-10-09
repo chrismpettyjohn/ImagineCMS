@@ -3,38 +3,66 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@imagine-cms/api": [
+      "@imagine/api": [
         "apps/imagine-api/src"
       ],
-      "@imagine-cms/imagine-web": [
+      "@imagine/imagine-web": [
         "apps/imagine-web/src"
       ],
-      "@imagine-cms/imagine-next": [
+      "@imagine/imagine-next": [
         "apps/imagine-next/src"
       ],
-      "@imagine-cms/game-ui": [
+      "@imagine/game-ui": [
         "libs/game-ui/src"
       ],
-      "@imagine-cms/shared-ui": [
+      "@imagine/shared-ui": [
         "libs/shared-ui/src"
       ],
-      "@imagine-cms/client": [
+      "@imagine/client": [
         "libs/client/src"
       ],
-      "@imagine-cms/types": [
+      "@imagine/types": [
         "libs/types/src"
       ],
-      "@imagine-cms/web": [
+      "@imagine/web": [
         "libs/web/src"
       ],
-      "@imagine-cms/websocket": [
+      "@imagine/websocket": [
         "libs/websocket/src"
       ],
+      "@imagine/svc-auth": [
+        "service/svc-auth/src"
+      ],
+      "@imagine/svc-content-page": [
+        "service/svc-content-page/src"
+      ],
+      "@imagine/svc-content-schema": [
+        "service/svc-content-schema/src"
+      ],
+      "@imagine/svc-content-type": [
+        "service/svc-content-type/src"
+      ],
+      "@imagine/svc-graphql": [
+        "service/svc-graphql/src"
+      ],
+      "@imagine/svc-role": [
+        "service/svc-role/src"
+      ],
+      "@imagine/svc-user": [
+        "service/svc-user/src"
+      ]
     },
     "noEmit": true
   },
   "include": [
     "apps",
-    "libs"
-, "service/svc-content-page/content-page", "service/svc-content-type/content-type", "service/svc-content-schema/content-schema"  ]
+    "libs",
+    "service/svc-auth/src",
+    "service/svc-content-page/src",
+    "service/svc-content-schema/src",
+    "service/svc-content-type/src",
+    "service/svc-graphql/src",
+    "service/svc-role/src",
+    "service/svc-user/src"
+  ]
 }
