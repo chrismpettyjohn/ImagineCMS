@@ -102,8 +102,8 @@ export function AdminSidebar() {
             </Box>
 
             <Box sx={{ p: 2, bgcolor: 'secondary.main', textAlign: 'center' }}>
-                <Typography variant="body2" color="primary.main">
-                    <Link href="/about" passHref><b>Cerberus</b></Link> by <Link href="https://github.com/chrismpettyjohn" target="_blank" passHref>Chris P</Link>
+                <Typography variant="body2" style={{ color: 'black' }}>
+                    <Link href="/about" passHref style={{ textDecoration: 'none' }}><b>Cerberus</b></Link> by <Link href="https://github.com/chrismpettyjohn" target="_blank" passHref style={{ textDecoration: 'none' }}>Chris P</Link>
                 </Typography>
             </Box>
         </Drawer>
