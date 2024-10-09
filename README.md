@@ -35,7 +35,7 @@ Dynamic Content: Fetches and updates content in real-time as defined in the CMS.
 
 ## Libs
 
-###lib-composer
+### lib-composer
 The lib-composer library is the engine responsible for converting custom schema definitions (written in YAML) into native React components. It acts as a bridge between the content model and the rendered UI, ensuring the flexibility to build complex, reusable components based on the schema.
 
 Schema-Based Rendering: Uses YAML-defined schemas to generate components dynamically.
