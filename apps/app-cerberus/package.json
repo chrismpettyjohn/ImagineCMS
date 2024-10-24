@@ -22,7 +22,8 @@
     "js-yaml": "4.1.0",
     "monaco-editor": "0.52.0",
     "react-monaco-editor": "0.56.2",
-    "react-dropzone": "14.2.9"
+    "react-dropzone": "14.2.9",
+    "@dnd-kit/core": "6.1.0"
   },
   "devDependencies": {
     "@types/node": "^20",

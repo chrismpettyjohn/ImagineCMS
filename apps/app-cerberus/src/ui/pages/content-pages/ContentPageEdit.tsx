@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import 'monaco-editor/esm/vs/basic-languages/yaml/yaml.contribution';
 import { SchemaEditor } from '../../components/schema-editor/SchemaEditor';
 import { Box, Typography } from '@mui/material';
+import { VisualEditor } from '../../components/visual-editor/VisualEditor';
 
 const initialSchema = {
     "contentType": {
@@ -66,7 +67,7 @@ export function ContentPagesEditPage({ contentPageID }: ContentPagesEditPageProp
 
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', padding: 8 }}>
             <Typography variant="h4" sx={{ marginBottom: 2 }}>Page Editor</Typography>
-            <SchemaEditor fileName={fileName} defaultSchema={schema} onSave={setSchema} />
+            <VisualEditor fileName={fileName} defaultSchema={schema} onSave={setSchema} />
         </Box>
     )
 }
